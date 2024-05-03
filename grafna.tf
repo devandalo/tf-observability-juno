@@ -3,6 +3,7 @@ resource "azurerm_dashboard_grafana" "observ" {
   resource_group_name           = module.rg.name
   location                      = module.rg.location
   public_network_access_enabled = true
+  grafana_major_version         = 10
   tags                          = local.tags
 
   identity {
