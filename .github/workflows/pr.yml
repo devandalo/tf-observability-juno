@@ -1,0 +1,13 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-plan:
+    uses: devandalo/tf-workflows-juno/.github/workflows/pr-tmpl.yml@main
+    secrets: inherit
+    with:
+      environment: "lab"
